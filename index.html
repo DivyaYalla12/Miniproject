@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Aggregator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Internship Aggregator</h1>
+        <input type="text" id="searchInput" placeholder="Search for internships...">
+    </header>
+    <main>
+        <section id="filters">
+            <label for="locationFilter">Location:</label>
+            <select id="locationFilter">
+                <option value="">All</option>
+                <option value="remote">Remote</option>
+                <option value="on-site">On-site</option>
+            </select>
+        </section>
+        <section id="internshipList"></section>
+    </main>
+    <footer>
+        <h2>Apply for an Internship</h2>
+        <form id="applicationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="internship">Internship:</label>
+            <select id="internship" name="internship" required>
+                <option value="Software Developer Intern">Software Developer Intern</option>
+                <option value="Marketing Intern">Marketing Intern</option>
+                <option value="Data Science Intern">Data Science Intern</option>
+                <option value="Design Intern">Design Intern</option>
+            </select>
+            <button type="submit">Apply</button>
+        </form>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
