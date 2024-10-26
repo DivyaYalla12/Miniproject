@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const internshipDiv = document.createElement('div');
             internshipDiv.classList.add('internship');
             internshipDiv.innerHTML = `
-                <h2><i class="fas fa-briefcase"></i>${internship.title}</h2>
-                <p class="company"><i class="fas fa-building"></i>${internship.company}</p>
-                <p class="location"><i class="fas fa-map-marker-alt"></i>${internship.location}</p>
-                <p class="description"><i class="fas fa-info-circle"></i>${internship.description}</p>
+                <h2><i class="fas fa-briefcase"></i> ${internship.title}</h2>
+                <p class="company"><i class="fas fa-building"></i> ${internship.company}</p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> ${internship.location}</p>
+                <p class="description"><i class="fas fa-info-circle"></i> ${internship.description}</p>
             `;
             internshipList.appendChild(internshipDiv);
         });
@@ -43,16 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = {
             name: formData.get('name'),
             email: formData.get('email'),
+            phone: formData.get('phone'), // Added phone number
             internship: formData.get('internship')
         };
 
+        // Prepare the resume file for upload
+        const resumeFile = formData.get('resume');
+
         try {
+            // Assuming you are handling file uploads in a different manner
             const response = await fetch('https://your-api-endpoint.amazonaws.com/apply', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data) // Send other application data
             });
 
             if (response.ok) {
