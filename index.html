@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship Aggregator</title>
+    <title>INTERNSHIP AGGREGATOR</title>
+    <link rel="icon" type="image/x-icon" href="intern.jpg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -30,6 +31,10 @@
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="college">college:</label>
+            <input type="text" id="college" name="college" required>
             <label for="internship">Internship:</label>
             <select id="internship" name="internship" required>
                 <option value="Software Developer Intern">Software Developer Intern</option>
@@ -37,6 +42,8 @@
                 <option value="Data Science Intern">Data Science Intern</option>
                 <option value="Design Intern">Design Intern</option>
             </select>
+            <label for="resume">Resume:</label>
+            <input type="file" id="resume" name="resume" required>
             <button type="submit">Apply</button>
         </form>
     </footer>
