@@ -6,15 +6,10 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: rgb(155, 113, 195);
     color: white;
     text-align: center;
     padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
 }
 
 header input {
@@ -23,7 +18,12 @@ header input {
     width: 80%;
     max-width: 400px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
 main {
@@ -75,7 +75,7 @@ main {
 }
 
 .internship .company {
-    color: #4CAF50;
+    color: rgb(155, 113, 195);
     font-weight: bold;
 }
 
@@ -88,7 +88,7 @@ main {
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: rgb(155, 113, 195);
     color: white;
     padding: 20px;
     text-align: center;
@@ -112,7 +112,8 @@ footer form label {
     font-weight: bold;
 }
 
-footer form input, footer form select {
+footer form input,
+footer form select {
     padding: 10px;
     width: 80%;
     max-width: 400px;
@@ -121,10 +122,23 @@ footer form input, footer form select {
     margin-bottom: 10px;
 }
 
+footer form input[type="file"] {
+    border: 1px solid #fff; /* White border */
+    background-color: #f4f4f9; /* Match background color */
+    padding: 10px; /* Consistent padding */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below */
+}
+
+footer form input[type="file"]:focus {
+    border-color: rgb(155, 113, 195); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
 footer form button {
     padding: 10px 20px;
     background-color: white;
-    color: #4CAF50;
+    color: rgb(155, 113, 195);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -134,3 +148,5 @@ footer form button {
 footer form button:hover {
     background-color: #ddd;
 }
+
+/* Additional styles for company logos */
